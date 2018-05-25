@@ -1,0 +1,14 @@
+version: '2'
+services:
+  app-service:
+    container_name: ${APP_CONTAINER_NAME}
+    build:
+      context: .
+      dockerfile: Dockerfile-app
+    restart: always
+    ports:
+      - ${APP_EXTERNAL_PORT}:3000
+    volumes:
+      - ./app:/src/app
+    environment:
+      - NODE_ENV=${NODE_ENV}

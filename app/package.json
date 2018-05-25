@@ -1,0 +1,20 @@
+{
+  "name": "dockerized_nodejs",
+  "version": "1.0.0",
+  "description": "A development environment for an ExpressJs app using Docker",
+  "private": true,
+  "author": "Ana Cicconi",
+  "main": "index.js",
+  "scripts": {
+    "start": "per-env",
+    "start:prod": "pm2-docker index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/anacicconi/dockerized_nodejs"
+  }
+}
